@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.PostPlantFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/postPlantHeader"
+                android:textAlignment="center"/>
+
+            <!-- Rain  -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/soilSalinity"
+                />
+            <RadioGroup
+                android:id="@+id/post_pant_soil_salinity_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_pant_soil_salinity_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rain_high"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_pant_soil_salinity_moderate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/soil_salinity_moderate"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_pant_soil_salinity_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rain_low"/>
+            </RadioGroup>
+
+            <!-- Wet Season -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/soilPh"
+                />
+            <RadioGroup
+                android:id="@+id/post_pant_soil_pH_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_pant_soil_pH_acid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plantSoilPHAcid"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_pant_soil_pH_balanced"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plantSoilBalanced"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_pant_soil_pH_alkaline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plantSoilPHAlkaline"/>
+            </RadioGroup>
+
+            <!-- Soil Nutrient -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SoilNutrient"
+                />
+            <RadioGroup
+                android:id="@+id/post_plant_soil_nutrient_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_soil_nutrient_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prePlantSoilNutrientLow"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_soil_nutrient_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prePlantSoilNutrientHigh"/>
+            </RadioGroup>
+
+            <!-- Lime Soil -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/waterTemperature"
+                />
+            <RadioGroup
+                android:id="@+id/post_plant_water_temperature_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_water_temperature_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rain_low"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_water_temperature_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rain_high"/>
+            </RadioGroup>
+
+            <!-- Soil Tilling -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/waterSalinity"
+                />
+            <RadioGroup
+                android:id="@+id/post_plant_water_salinity_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_water_salinity_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rain_high"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_water_salinity_moderate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/soil_salinity_moderate"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_water_salinity_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rain_low"/>
+            </RadioGroup>
+
+            <!-- Salt Tolerant Rice -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SaltTolerantRice"
+                />
+            <RadioGroup
+                android:id="@+id/post_plant_salt_tolerant_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_salt_tolerant_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saltTolerantYes"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_salt_tolerant_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saltTolerantNo"/>
+            </RadioGroup>
+
+            <!-- Shrimp Stocking Density -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ShrimpStockingDensity"
+                />
+            <RadioGroup
+                android:id="@+id/post_plant_shrimp_stocking_density_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_shrimp_stocking_density_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shrimpStockingDensityLow"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_shrimp_stocking_density_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shrimpStockingDensityMedium"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_shrimp_stocking_density_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shrimpStockingDensityHigh"/>
+            </RadioGroup>
+
+            <!-- Water Color Management -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/WaterColorManagement"
+                />
+            <RadioGroup
+                android:id="@+id/post_plant_water_color_management_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_water_color_management_zeolite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/waterClorManagementZeolite"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_water_color_management_DAP_URE_Kali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/waterClorManagementDAPUREKali"/>
+            </RadioGroup>
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/post_plant_submit"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/Submit"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>
