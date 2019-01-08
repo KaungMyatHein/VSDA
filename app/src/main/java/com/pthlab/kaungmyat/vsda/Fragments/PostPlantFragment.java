@@ -26,6 +26,7 @@ public class PostPlantFragment extends Fragment implements View.OnClickListener{
     private RadioGroup postPlantSaltTolerantRiceGroup;
     private RadioGroup postPlantShrimpStockingDensityGroup;
     private RadioGroup postPlantWaterColorManagementGroup;
+    private RadioGroup postPlantRiceColorGroup;
     private Button postPlantSubmitButton;
     private View view;
 
@@ -50,10 +51,11 @@ public class PostPlantFragment extends Fragment implements View.OnClickListener{
         postPlantSoilPhGroup = view.findViewById(R.id.post_pant_soil_pH_group);
         postPlantSoilNutrientGroup = view.findViewById(R.id.post_plant_soil_nutrient_group);
         postPlantWaterTemperatureGroup = view.findViewById(R.id.post_plant_water_temperature_group);
-        postPlantWaterSalinityGroup = view.findViewById(R.id.plant_water_salinity_group);
+        postPlantWaterSalinityGroup = view.findViewById(R.id.post_plant_water_salinity_group);
         postPlantSaltTolerantRiceGroup = view.findViewById(R.id.post_plant_salt_tolerant_group);
         postPlantShrimpStockingDensityGroup = view.findViewById(R.id.post_plant_shrimp_stocking_density_group);
         postPlantWaterColorManagementGroup = view.findViewById(R.id.post_plant_water_color_management_group);
+        postPlantRiceColorGroup = view.findViewById(R.id.post_plant_rice_color_group);
         postPlantSubmitButton = view.findViewById(R.id.post_plant_submit);
     }
 
@@ -67,6 +69,7 @@ public class PostPlantFragment extends Fragment implements View.OnClickListener{
             postPlantWaterSalinityGroup.getCheckedRadioButtonId() == -1 ||
             postPlantSaltTolerantRiceGroup.getCheckedRadioButtonId() == -1 ||
             postPlantShrimpStockingDensityGroup.getCheckedRadioButtonId() == -1 ||
+            postPlantRiceColorGroup.getCheckedRadioButtonId() == -1 ||
             postPlantWaterColorManagementGroup.getCheckedRadioButtonId() == -1)
         {
             PostPlant postPlant = new PostPlant();
@@ -76,6 +79,7 @@ public class PostPlantFragment extends Fragment implements View.OnClickListener{
             postPlant.setWaterTemperatureValue(getWaterTemperatureValue());
             postPlant.setWaterSalinityValue(getWaterSalinityValue());
             postPlant.setSaltTolerantRiceValue(getSaltTolerantRiceValue());
+            postPlant.setRiceColorValue(getRiceColorValue());
             postPlant.setShrimpStoclingDensityValue(getShrimpStockingDensityValue());
             postPlant.setWateColorManagementValue(getWaterColorManagementValue());
             Intent i = new Intent(getActivity(),Result.class);
@@ -83,6 +87,16 @@ public class PostPlantFragment extends Fragment implements View.OnClickListener{
             i.putExtra("value", postPlant);
             startActivity(i);
         }
+    }
+
+    private int getRiceColorValue() {
+        switch (postPlantRiceColorGroup.getCheckedRadioButtonId())
+        {
+            case R.id.post_plant_rice_color_green : return 1;
+            case R.id.post_plant_rice_color_mid_yellow : return 2;
+            case R.id.post_plant_rice_color_yellow : return 3;
+        }
+        return 0;
     }
 
     private int getWaterColorManagementValue() {

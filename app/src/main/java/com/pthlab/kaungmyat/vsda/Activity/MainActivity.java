@@ -159,7 +159,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.home) {
         } else if (id == R.id.about_app)
         {
-
+            Intent i = new Intent(this,Result.class);
+            startActivity(i);
         } else if (id == R.id.about_developer)
         {
 

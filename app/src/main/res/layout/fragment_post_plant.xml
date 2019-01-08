@@ -170,7 +170,32 @@
                     android:layout_height="wrap_content"
                     android:text="@string/saltTolerantNo"/>
             </RadioGroup>
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/RiceColor"
+                />
+            <RadioGroup
+                android:id="@+id/post_plant_rice_color_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_rice_color_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Green"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_rice_color_mid_yellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MidYellow"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/post_plant_rice_color_yellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Yellow"/>
+            </RadioGroup>
             <!-- Shrimp Stocking Density -->
             <TextView
                 android:layout_width="match_parent"

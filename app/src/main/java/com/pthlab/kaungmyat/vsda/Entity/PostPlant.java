@@ -13,6 +13,16 @@ public class PostPlant implements Serializable {
     int shrimpStoclingDensityValue;
     int wateColorManagementValue;
 
+    public int getRiceColorValue() {
+        return riceColorValue;
+    }
+
+    public void setRiceColorValue(int riceColorValue) {
+        this.riceColorValue = riceColorValue;
+    }
+
+    int riceColorValue;
+
     public int getSoilSalinityValue() {
         return soilSalinityValue;
     }

@@ -59,4 +59,8 @@
     <string name="waterTemperature">Water Temperature</string>
     <string name="waterSalinity">Water Salinity</string>
     <string name="postPlantHeader">Post Plant</string>
+    <string name="RiceColor">Rice Color</string>
+    <string name="Green">Green</string>
+    <string name="MidYellow">Mid Yellow</string>
+    <string name="Yellow">Yellow</string>
 </resources>

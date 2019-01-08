@@ -80,8 +80,10 @@ public class PrePlantFragment extends Fragment implements View.OnClickListener {
             preplant.setShrimpStockingDensityValue(getShrimpStockingDensityValue());
             preplant.setWaterColorValue(getWaterColorManagementValue());
             Intent i = new Intent(getActivity(),Result.class);
-            i.putExtra("type","1");
-            i.putExtra("value", preplant);
+            i.putExtra( "type",1);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("value", preplant);
+            i.putExtras(bundle);
             startActivity(i);
         }
     }
@@ -98,8 +100,8 @@ public class PrePlantFragment extends Fragment implements View.OnClickListener {
     private int getSaltTolerantRiceValue() {
         switch (prePlantSaltTolerantRiceGroup.getCheckedRadioButtonId())
         {
-            case R.id.pre_plant_salt_tolerant_yes : return 0;
-            case R.id.pre_plant_salt_tolerant_no : return 1;
+            case R.id.pre_plant_salt_tolerant_yes : return 1;
+            case R.id.pre_plant_salt_tolerant_no : return 2;
         }
         return 0;
     }
