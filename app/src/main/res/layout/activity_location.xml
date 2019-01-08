@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnShowLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Show Current Location" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Current longtitude"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_long"
+            android:layout_width="0dp"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Current latitude"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_lat"
+            android:layout_width="0dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnCheckLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Location"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/txt_chkresult"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/holo_blue_dark" />
+    </LinearLayout>
+</LinearLayout>

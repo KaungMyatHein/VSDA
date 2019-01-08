@@ -55,7 +55,10 @@ public class MainActivity extends AppCompatActivity
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 if (id == R.id.home) {
-                } else if (id == R.id.about_app)
+                } else if (id == R.id.detect_location) {
+                    Intent feedbackIntent= new Intent(MainActivity.this,LocationActivity.class);
+                    startActivity(feedbackIntent);
+                }else if (id == R.id.about_app)
                 {
 
                 } else if (id == R.id.about_developer)
@@ -134,7 +137,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
-        } else if (id == R.id.about_app)
+        } else if (id == R.id.detect_location) {
+
+        }else if (id == R.id.about_app)
         {
 
         } else if (id == R.id.about_developer)
@@ -157,6 +162,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
+        }else if (id == R.id.detect_location) {
+
         } else if (id == R.id.about_app)
         {
             Intent i = new Intent(this,Result.class);
