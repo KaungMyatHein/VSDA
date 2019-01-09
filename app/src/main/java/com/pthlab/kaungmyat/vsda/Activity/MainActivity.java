@@ -1,5 +1,6 @@
 package com.pthlab.kaungmyat.vsda.Activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     private PrePlantFragment prePlantFragment;
     private PlantFragment plantFragment;
     private PostPlantFragment postPlantFragment;
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,9 +85,12 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.addToBackStack("xyz");
         fragmentTransaction.add(R.id.fragmentContainer,prePlantFragment);
         fragmentTransaction.commit();
+        bottomNavigationView.setItemTextAppearanceActive(R.drawable.icons_leaf);
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
                 int id = menuItem.getItemId();
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -137,6 +142,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
+
         } else if (id == R.id.detect_location) {
 
         }else if (id == R.id.about_app)
@@ -150,8 +156,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.feedback)
         {
-            Intent feedbackIntent= new Intent(MainActivity.this,FeedbackActivity.class);
-            startActivity(feedbackIntent);
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -162,23 +167,20 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
+
         }else if (id == R.id.detect_location) {
 
         } else if (id == R.id.about_app)
         {
-            Intent i = new Intent(this,Result.class);
-            startActivity(i);
         } else if (id == R.id.about_developer)
         {
 
         } else if (id == R.id.nav_share)
         {
-            shareApp();
 
         } else if (id == R.id.feedback)
         {
-            Intent feedbackIntent= new Intent(MainActivity.this,FeedbackActivity.class);
-            startActivity(feedbackIntent);
+
         }
         return super.onOptionsItemSelected(item);
     }

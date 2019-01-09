@@ -5,15 +5,15 @@
 
         <item
             android:id="@+id/pre_plant_navi"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Pre Plant" />
+            android:icon="@drawable/icons_leaf_empty"
+            android:title="Pre Plant"/>
         <item
             android:id="@+id/plant_navi"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Plant" />
+            android:icon="@drawable/icons_leaf_empty"
+            android:title="Plant"/>
         <item
             android:id="@+id/post_plant_navi"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Post Plant" />
+            android:icon="@drawable/icons_leaf_empty"
+            android:title="Post Plant"/>
 
 </menu>

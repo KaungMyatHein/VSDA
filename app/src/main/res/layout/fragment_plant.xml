@@ -12,18 +12,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/plantHeader"
-                android:textAlignment="center"/>
-
+            android:orientation="vertical"
+            android:layout_margin="10dp">
             <!-- Soil Salinity  -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/soilSalinity"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"
                 />
             <RadioGroup
                 android:id="@+id/plant_soil_salinity_group"
@@ -49,9 +48,13 @@
 
             <!-- Soil Ph -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/soilpH"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"
                 />
             <RadioGroup
                 android:id="@+id/plant_soil_ph_group"
@@ -77,9 +80,13 @@
 
             <!-- Soil Nutrient -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/SoilNutrient"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"
                 />
             <RadioGroup
                 android:id="@+id/plant_soil_nutrient_group"
@@ -100,9 +107,13 @@
 
             <!-- Water Temperature -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/waterTemperature"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"
                 />
             <RadioGroup
                 android:id="@+id/plant_water_temperature_group"
@@ -123,9 +134,13 @@
 
             <!-- Water Salinity -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/waterSalinity"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"
                 />
             <RadioGroup
                 android:id="@+id/plant_water_salinity_group"
@@ -151,9 +166,13 @@
 
             <!-- Salt Tolerant Rice -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/SaltTolerantRice"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"
                 />
             <RadioGroup
                 android:id="@+id/plant_salt_tolerant_group"
@@ -174,9 +193,13 @@
 
             <!-- Shrimp Stocking Density -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ShrimpStockingDensity"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"
                 />
             <RadioGroup
                 android:id="@+id/plant_shrimp_stocking_density_group"
@@ -202,9 +225,13 @@
 
             <!-- Water Color Management -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/WaterColorManagement"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"
                 />
             <RadioGroup
                 android:id="@+id/plant_water_color_management_group"

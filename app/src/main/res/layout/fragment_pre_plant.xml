@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.PrePlantFragment">
+    tools:context=".Fragments.PrePlantFragment"
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,19 +13,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/prePlantHeader"
-                android:textAlignment="center" />
-
+            android:orientation="vertical"
+            android:layout_margin="10dp">
             <!-- Rain  -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Rain" />
+                android:text="@string/Rain"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"/>
 
             <RadioGroup
                 android:id="@+id/pre_plant_rain_group"
@@ -53,9 +52,13 @@
 
             <!-- Wet Season -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/wetSeason" />
+                android:text="@string/wetSeason"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"/>
 
             <RadioGroup
                 android:id="@+id/pre_plant_wet_season_group"
@@ -84,9 +87,13 @@
 
             <!-- Soil Nutrient -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/SoilNutrient" />
+                android:text="@string/SoilNutrient"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"/>
 
             <RadioGroup
                 android:id="@+id/pre_plant_soil_nutrient_group"
@@ -109,9 +116,13 @@
 
             <!-- Lime Soil -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/LimeSoil" />
+                android:text="@string/LimeSoil"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"/>
 
             <RadioGroup
                 android:id="@+id/pre_plant_lime_soil_group"
@@ -146,9 +157,13 @@
 
             <!-- Soil Tilling -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/SoilTilling" />
+                android:text="@string/SoilTilling"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"/>
 
             <RadioGroup
                 android:id="@+id/pre_plant_soil_tilling_group"
@@ -171,9 +186,13 @@
 
             <!-- Salt Tolerant Rice -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/SaltTolerantRice" />
+                android:text="@string/SaltTolerantRice"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"/>
 
             <RadioGroup
                 android:id="@+id/pre_plant_salt_tolerant_group"
@@ -196,9 +215,13 @@
 
             <!-- Shrimp Stocking Density -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ShrimpStockingDensity" />
+                android:text="@string/ShrimpStockingDensity"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"/>
 
             <RadioGroup
                 android:id="@+id/pre_plant_shrimp_stocking_density_group"
@@ -227,9 +250,13 @@
 
             <!-- Water Color Management -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/WaterColorManagement" />
+                android:text="@string/WaterColorManagement"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/bg_color"
+                android:textColor="@android:color/white"/>
 
             <RadioGroup
                 android:id="@+id/pre_plant_water_color_management_group"

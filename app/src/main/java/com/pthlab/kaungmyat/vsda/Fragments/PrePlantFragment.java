@@ -40,9 +40,6 @@ public class PrePlantFragment extends Fragment implements View.OnClickListener {
         return view;
     }
 
-
-
-
     private void registerForViews() {
         prePlantRainGroup = view.findViewById(R.id.pre_plant_rain_group);
         prePlantWetSeasonGroup = view.findViewById(R.id.pre_plant_wet_season_group);
