@@ -11,11 +11,10 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
-import android.util.Log;
 
 public class GPSDetector extends Service implements LocationListener {
 
-    private LocationActivity activity;
+    private MainActivity activity;
     private boolean isGPSEnabled = false;
     private boolean isNetworkEnabled = false;
     private boolean canGetLocation = false;
@@ -29,7 +28,7 @@ public class GPSDetector extends Service implements LocationListener {
     private static final long MIN_TIME_BW_UPDATES = 600;
     private LocationManager locationManager;
 
-    public GPSDetector(LocationActivity context) {
+    public GPSDetector(MainActivity context) {
         this.activity = context;
         getLocation();
     }
@@ -98,7 +97,7 @@ public class GPSDetector extends Service implements LocationListener {
 
     /**
      * Stop using GPS listener
-     * Calling this function will stop using GPS in your app
+     * Calling this function will stop using GPS in  app
      */
     public void stopUsingGPS() {
         if (locationManager != null) {

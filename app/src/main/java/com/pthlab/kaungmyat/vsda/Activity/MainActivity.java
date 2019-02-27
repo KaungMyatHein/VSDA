@@ -1,8 +1,12 @@
 package com.pthlab.kaungmyat.vsda.Activity;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +21,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.pthlab.kaungmyat.vsda.Fragments.PlantFragment;
 import com.pthlab.kaungmyat.vsda.Fragments.PostPlantFragment;
@@ -32,6 +37,9 @@ public class MainActivity extends AppCompatActivity
     private PrePlantFragment prePlantFragment;
     private PlantFragment plantFragment;
     private PostPlantFragment postPlantFragment;
+    private GPSDetector gpsDetector;
+    SharedPreferences sharedPreferences;
+
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +47,17 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
+        if (isFirstRun){
+            // Place your dialog code here to display the dialog
+            //gpsDetector = new GPSDetector(MainActivity.this);
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                    .edit()
+                    .putBoolean("isFirstRun", false)
+                    .apply();
+        }
+
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -46,6 +65,7 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -117,9 +137,10 @@ public class MainActivity extends AppCompatActivity
                 return  true;
             }
         });
+
+
+
     }
-
-
 
     @Override
     public void onBackPressed() {
@@ -194,5 +215,53 @@ public class MainActivity extends AppCompatActivity
         sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
+
+    public void updateLocation() {
+            getCurrentLocation();
+    }
+
+    private void getCurrentLocation() {
+
+        // check if GPS enabled
+          if (gpsDetector.canGetLocation()) {
+
+                double latitude = gpsDetector.getLatitude();
+                double longitude = gpsDetector.getLongitude();
+                // Lat and long can change according to the requirement
+                if(latitude > 0 && latitude <50 && longitude >50 && longitude <  100){
+
+                    AlertDialog.Builder alertDialog  = new AlertDialog.Builder(MainActivity.this);
+                    alertDialog.setTitle("Notice");
+                    alertDialog.setMessage("Your location is valid.");
+                    alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    alertDialog.show();
+                }else{
+
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+                    alertDialog.setTitle("Notice");
+                    alertDialog.setMessage("Sorry!Your Location is invalid");
+                    alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    alertDialog.show();
+                }
+            } else {
+                // Ask user to enable GPS/network in settings
+                gpsDetector.showSettingsAlert();
+            }
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        gpsDetector = new GPSDetector(MainActivity.this);
     }
 }

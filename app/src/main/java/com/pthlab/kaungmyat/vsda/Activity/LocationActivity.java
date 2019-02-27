@@ -54,7 +54,7 @@ public class LocationActivity extends AppCompatActivity {
 
     private void getCurrentLocation () {
         // create class object
-        gps = new GPSDetector(LocationActivity.this);
+       // gps = new GPSDetector(MainActivity.class);
 
         // check if GPS enabled
         if (gps.canGetLocation()) {
